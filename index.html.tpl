@@ -72,90 +72,37 @@
 
       <h2>Our Projects</h2>
 
-      
+      {% for project in projects %}
       <div class="row project">
-        <div class="col-lg-8 ">
-          <p class="project-title">Smile: Last-Mile Logistics & IoT</p>
+        <div class="col-lg-8 {% if loop.index is divisibleby 2 %}order-lg-2{% endif %}">
+          <p class="project-title">{{ project.title }}</p>
 
-          <p>Organizations use process models to document, improve, and automate their business processes. Smartphone Apps, IoT-Devices, etc. offer the possibility to react fast and flexible on customer demands which can be not captured with existing process modeling concepts. The last mile logistic has gained higher relevance, because of the increase in the e-commerce. Our group has a industry-research project called SMile where new delivery options will be developed and tested. This requires a flexible, customer-oriented process management approach.</p>
+          <p>{{ project.description}}</p>
           
           <p class="project-link">
-            Link to project page: <a href="https://www.smileproject.de">https://www.smileproject.de</a>
+            Link to project page: <a href="{{ project.url }}">{{ project.url }}</a>
           </p>
         </div>
-        <div class="col-lg-4 project-image ">
-          <img src="img/project_smile.png" />
+        <div class="col-lg-4 project-image {% if loop.index is divisibleby 2 %}order-lg-1{% endif %}">
+          <img src="{{ project.image }}" />
         </div>
       </div>
-      
-      <div class="row project">
-        <div class="col-lg-8 order-lg-2">
-          <p class="project-title">Early Warning Dashboard with Bosch Thermotechnik</p>
-
-          <p>The cooperation partner was Bosch Thermotechnik (BoschTT), a German company that produces heaters for both private and commercial use. In 2015 it was the leading vendor of Smart-Heating components. Our project addresses these Smart-Heating components. The goal of it was to develop a dashboard application to monitor the heaters of BoschTT via the events they send. Because of the provided visualization and analysis it would be a lot easier to optimize the early warning process and prevent failures from happening again.</p>
-          
-          <p class="project-link">
-            Link to project page: <a href="https://boschproject.de">https://boschproject.de</a>
-          </p>
-        </div>
-        <div class="col-lg-4 project-image order-lg-1">
-          <img src="img/project_bosch.png" />
-        </div>
-      </div>
-      
-      <div class="row project">
-        <div class="col-lg-8 ">
-          <p class="project-title">Sensoren im Spargelfeld - Smarte Prozesse im Internet der Dinge</p>
-
-          <p>Prozessmodelle beschreiben komplexe Arbeitsabläufe in Unternehmen. In der Praxis gibt es häufig eine Vielzahl von Prozessvarianten, deren Entwicklung und Implementierung sehr aufwändig ist. Production Case Management (PCM) ist ein neuartiger Ansatz zur Modellierung und Ausführung von Prozessvarianten. Anstatt einen Prozess in nur einem Modell zu erfassen werden Prozessfragmente benutzt (siehe rechts), die bei der Ausführung gemäß einer definierten Semantik durch Anwender logisch verknüpft werden können. rganizations use process models to document, improve, and automate their business processes. Smartphone Apps, IoT-Devices, etc. offer the possibility to react fast and flexible on customer demands which can be not captured with existing process modeling concepts. The last mile logistic has gained higher relevance, because of the increase in the e-commerce. Our group has a industry-research project called SMile where new delivery options will be developed and tested. This requires a flexible, customer-oriented process management approach.</p>
-          
-          <p class="project-link">
-            Link to project page: <a href="https://boschproject.de">https://boschproject.de</a>
-          </p>
-        </div>
-        <div class="col-lg-4 project-image ">
-          <img src="img/project_spargel.png" />
-        </div>
-      </div>
-      
-      <div class="row project">
-        <div class="col-lg-8 order-lg-2">
-          <p class="project-title">Get Services: Efficient Transportation Planning and Execution</p>
-
-          <p>The GET Service platform provides transportation planners with the means to plan transportation routes more efficiently and to respond quickly to unexpected events during transportation. To this end, it connects to existing transportation management systems and improves on their performance by enabling sharing of selected information between transportation partners, logistics service providers and authorities. By improving the modal split in Europe by just 2% and the number of empty miles by just 1%, the total energy cost of transportation can be reduced by around 2.3 billion liters of diesel, while the total CO2 emission in the EU can be decreased by 6.5 million ton.</p>
-          
-          <p class="project-link">
-            Link to project page: <a href="https://getservice-project.eu">https://getservice-project.eu</a>
-          </p>
-        </div>
-        <div class="col-lg-4 project-image order-lg-1">
-          <img src="img/project_get.png" />
-        </div>
-      </div>
-      
+      {% endfor %}
 
       <h2>Our Publications</h2>
       <!--
-        <ul>
-          <li>Janiesch, C., Koschmider, A., Mecella, M., Weber, B., Burattin, A., Ciccio, C.D., Gal, A., Kannengiesser, U., Mannhardt, F., Mendling, J., Oberweis, A., Reichert, M., Rinderle-Ma, S., Song, W., Su, J., Torres, V., Weidlich, M., Weske, M., Zhang, L.: <b>The internet-of-things meets business process management: Mutual benefits and challenges.</b>  CoRR abs/1709.03628 (2017)</li>
-          <li>Mandal, S., Hewelt, M., Weske, M.: <b>A Framework for Integrating Real-World Events and Processes in an IoT Environment.</b> In: International Conference on Cooperative    Information Systems (CoopIS), Springer (2017)</li>
-          <li>Völlker, M., Mandal, S., Hewelt, M.:  <b>Testing event-driven applications with automatically generated events.</b> In: Business Process Management (BPM) Demo Session, CEUR-WS.org (2017)</li>
-          <li>Beyer, J., Kuhn, P., Hewelt, M., Mandal, S., Weske, M.:  <b>Unicorn meets Chimera: Integrating External Events into Case Management.</b>  In: Business Process Management (BPM) Demo Session, CEUR-WS.org (2016)</li>
-          <li>Friedow, C., Völlker, M., Hewelt, M.: <b>Integrating IoT Devices into Business Processes.</b> In: Flexible Advanced Information Systems (co-located with CAiSE) (2018)</li>
-        </ul>
-        -->
       <ul>
-        
         <li>Janiesch, C., Koschmider, A., Mecella, M., Weber, B., Burattin, A., Ciccio, C.D., Gal, A., Kannengiesser, U., Mannhardt, F., Mendling, J., Oberweis, A., Reichert, M., Rinderle-Ma, S., Song, W., Su, J., Torres, V., Weidlich, M., Weske, M., Zhang, L.: <b>The internet-of-things meets business process management: Mutual benefits and challenges.</b>  CoRR abs/1709.03628 (2017)</li>
-        
         <li>Mandal, S., Hewelt, M., Weske, M.: <b>A Framework for Integrating Real-World Events and Processes in an IoT Environment.</b> In: International Conference on Cooperative    Information Systems (CoopIS), Springer (2017)</li>
-        
         <li>Völlker, M., Mandal, S., Hewelt, M.:  <b>Testing event-driven applications with automatically generated events.</b> In: Business Process Management (BPM) Demo Session, CEUR-WS.org (2017)</li>
-        
         <li>Beyer, J., Kuhn, P., Hewelt, M., Mandal, S., Weske, M.:  <b>Unicorn meets Chimera: Integrating External Events into Case Management.</b>  In: Business Process Management (BPM) Demo Session, CEUR-WS.org (2016)</li>
-        
         <li>Friedow, C., Völlker, M., Hewelt, M.: <b>Integrating IoT Devices into Business Processes.</b> In: Flexible Advanced Information Systems (co-located with CAiSE) (2018)</li>
-        
+      </ul>
+      -->
+      <ul>
+        {% for publication in publications %}
+        <li>{{ publication }}</li>
+        {% endfor %}
       </ul>
 
       <h2>Other Related Publications</h2>
@@ -168,13 +115,9 @@
       </ul>
       -->
       <ul>
-        
-        <li>BPM and IoT: The Signal of True Disruption</li>
-        
-        <li>The Internet of Things and Intelligent Business Process</li>
-        
-        <li>Why Is Business Process Management (BPM) Critical for IoT?</li>
-        
+        {% for publication in related_publications %}
+        <li>{{ publication }}</li>
+        {% endfor %}
       </ul>
 
       <h2>Contact</h2>
